@@ -1,0 +1,482 @@
+/* Base CSS */
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+.aligncenter {
+    display: block;
+    margin: 0 auto 15px;
+}
+a:focus { outline: 0 solid }
+img {
+    max-width: 100%;
+    height: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    font-weight: 700;
+    font-family: 'Yeseva One', cursive;
+}
+html,
+body { height: 100% }
+body {
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 16px;
+}
+a:hover { text-decoration: none }
+
+/* Remove Chrome Input Field's Unwanted Yellow Background Color */
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+.slide-bg-1 {
+    background: url(img/header-bg.jpg);
+}
+
+.slide-bg-2 {
+    background: url(img/new-parallax.jpg);
+}
+
+.slide-control {
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    font-size: 80px;
+    margin-top: -70px;
+    left: 30px;
+    opacity: .2;
+}
+
+.slide-control:hover {
+    opacity: 1;
+    color: #fff;
+}
+
+.slide-control.right {
+    left: auto;
+    right: 30px;
+}
+
+#top-slide-carousel.carousel-fade .carousel-inner .item {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+#top-slide-carousel.carousel-fade .carousel-inner .item,
+#top-slide-carousel.carousel-fade .carousel-inner .active.left,
+#top-slide-carousel.carousel-fade .carousel-inner .active.right {
+  opacity: 0;
+}
+#top-slide-carousel.carousel-fade .carousel-inner .active,
+#top-slide-carousel.carousel-fade .carousel-inner .next.left,
+#top-slide-carousel.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+#top-slide-carousel.carousel-fade .carousel-inner .next,
+#top-slide-carousel.carousel-fade .carousel-inner .prev,
+#top-slide-carousel.carousel-fade .carousel-inner .active.left,
+#top-slide-carousel.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+#top-slide-carousel.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+.sticky-wrapper {
+    width: 100%;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+}
+
+.is-sticky .header-area:after {
+    background: #000;
+    opacity: .8;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: -1;
+}
+
+.logo img {
+    height: 90px;
+}
+
+.header-area:after, .logo img, .mainmenu ul.nav.navbar-nav li a, .social-links {
+    transition: .3s;
+}
+
+.is-sticky .logo img {
+    height: 65px;
+    width: auto;
+    padding: 10px 0;
+}
+
+.is-sticky .mainmenu ul.nav.navbar-nav li a {
+    padding: 22px 14px;
+}
+
+.is-sticky .social-links {
+    top: 18px;
+}
+
+.header-text-area {
+    position: relative;
+    padding-top: 80px;
+}
+
+.header-text-area h2 {
+    background: url(img/line_symbol.png);
+}
+
+.top-area {
+    position: relative;
+}
+
+.top-area-bg {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+
+}
+
+.mainmenu ul.nav.navbar-nav {
+    text-align: right;
+    float: none;
+    font-size: 20px;
+}
+
+.mainmenu ul.nav.navbar-nav li {
+    position: relative;
+    float: none;
+    display: inline-block;
+}
+
+.mainmenu ul.nav.navbar-nav li a:focus {
+    background: none;
+}
+
+.mainmenu ul.nav.navbar-nav li.active::before {
+    background: #c8c5ba;
+    content: "";
+    height: 3px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+
+.is-sticky .mainmenu ul.nav.navbar-nav li.active a {
+    color: #cc9900;
+}
+
+/*.mainmenu ul.nav.navbar-nav li:hover::before {
+    background: #c8c5ba;
+    content: "";
+    height: 3px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}*/
+
+.mainmenu {
+    position: relative;
+    padding-right: 80px;
+}
+
+.mainmenu ul.nav.navbar-nav li:hover a {
+    background: none;
+}
+
+.mainmenu ul.nav.navbar-nav li a {
+    color: #fff;
+    padding: 40px 14px;
+}
+
+.header-text {
+    padding: 100px 0;
+}
+
+.header-text h2 {
+    color: #fff;
+    font-size: 70px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    padding-bottom: 70px;
+    margin-bottom: 40px;
+}
+
+.btn-filled {
+    color: #fff;
+    display: inline-block;
+    padding: 10px 30px;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    margin: 0 5px;
+}
+
+.btn-filled::after {
+    z-index: -1;
+    background: #1d2122;
+    opacity: .8;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+}
+
+.yellow-color-btn::after {
+    background: #d2ba82;
+}
+
+.social-links {
+    position: absolute;
+    top: 37px;
+    right: 0;
+}
+
+.social-links a {
+    color: #d8b13d;
+    font-size: 20px;
+    display: inline-block;
+    padding-left: 5px;
+}
+
+/* about */
+.about-area {
+    background: url(img/symphony.png);
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-title {
+    background: url(img/section-title-pattern.png) no-repeat scroll center bottom;
+    color: #cc9900;
+    padding-bottom: 35px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-text {
+    margin-top: 20px;
+}
+
+.author-photo {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.igredients-area {
+    position: relative;
+}
+
+.parallax-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.igredients-bg {
+    background-image: url(img/new-parallax.jpg);
+}
+
+.igredients-text {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-size: 16px;
+    padding: 30px;
+}
+
+.igredients-text p {
+    margin-bottom: 30px;
+}
+
+.igredients-text::after, .testimonial-list:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    content: "";
+    z-index: -1;
+    opacity: .7;
+}
+
+#testimonial-carousel::before {
+    font-family: FontAwesome;
+    content: "\f10d";
+    position: absolute;
+    left: -30px;
+    top: -17px;
+    color: #9a9b9a;
+    font-size: 35px;
+}
+
+.section-title.while-sec-title {
+    background-image: url(img/section-title-pattern-white.png);
+    color: #fff;
+}
+
+/*food menu*/
+
+.food-menu-area {
+    background: url(img/symphony.png);
+}
+
+.single-food-menu-item h2 {
+    border-bottom: 1px solid;
+    color: #c89f2d;
+    font-size: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;    
+}
+
+.single-food-menu-item h2 span {
+    float: right;
+    font-weight: 400;
+}
+
+.single-food-menu-item {
+    margin-bottom: 40px;
+}
+
+.single-food-menu-item.special {
+    border: 1px solid #d09900;
+    padding: 10px;
+    position: relative;
+}
+
+.single-food-menu-item p {
+    margin: 0;
+}
+
+.single-food-menu-item.special::before {
+    position: absolute;
+    content: "special";
+    background: #d09900;
+    text-transform: uppercase;
+    right: -1px;
+    top: -23px;
+    font-size: 14px;
+    color: #fff;
+    padding: 1px 5px;
+} 
+
+.testimonial-area {
+    position: relative;
+}
+
+.testimonial-bg {
+    background-image: url(img/new-parallax-2.jpg);
+}
+
+.testimonial-list {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-size: 25px;
+    padding: 50px;
+}
+
+.testimonial-list p.testimonial-author {
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+/* Contact */
+.contact-us-area {
+    background: url(img/symphony.png);
+}
+
+.contact-img img {
+    margin-left: 30px;
+    max-width: 245px;
+}
+
+.contact-form {
+    text-align: left;
+    margin-top: 30px;
+}
+
+.contact-form input[type="text"], .contact-form select {
+    width: 100%;
+    border: 1px solid #e2d4ac;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    color: #cb9821;
+}
+
+.contact-form button {
+    background: #c8a03c;
+    color: #fff;
+    border: none;
+    padding: 5px 30px;
+    width: 150px;
+    margin: 0 auto;
+    display: block;
+}
+
+.footer-area {
+    background: #191919;
+    color: #bfbfbf;
+    font-size: 15px;
+    padding: 50px 0;
+}
+
+.footer-area .section-title {
+    font-size: 20px;
+    color: #fff;
+    background-image: url(img/section-title-footer.png);
+}
+
+.footer-area strong {
+    color: #fff;
+}
+
+.footer-area .footer-cards {
+    color: #fff;
+    margin-top: 20px;
+}
+
+.footer-cards i {
+    margin: 0 2px;
+}
+
+.footer-social-icon a {
+    font-size: 20px;
+    color: #fff;
+    display: inline-block;
+    padding: 0 3px;
+}
